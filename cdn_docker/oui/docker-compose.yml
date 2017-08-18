@@ -1,0 +1,22 @@
+version: '2'
+services:
+  env:
+    build: ./env
+    image: oui-env
+  django:
+    build: ./codes
+    image: oui-app
+    ports:
+      - "80:80"
+      - "4444:4444"
+      - "8080:8080"
+      - "8081:8081"
+      - "8082:8082"
+    volumes:
+      - /opt/cdn/ui:/opt/cdn/ui
+      - /var/log/uwsgi:/var/log/uwsgi
+    extra_hosts:
+      #- "cdb-local.cdnetworks.com:10.192.237.68"
+      - "cdb-local.cdnetworks.com:10.192.237.212"
+      - "spectrumapi-qa.cdnetworks.com:10.192.237.213"
+      - "prismapi-qa.cdnetworks.com:10.192.237.214"

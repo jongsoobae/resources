@@ -1,0 +1,26 @@
+version: '2'
+services:
+  env:
+    build: ./env
+    image: my-ngp-env
+  django:
+    build: ./codes
+    image: my-ngp
+    ports:
+      - "81:81"
+      - "5555:5555"
+      - "8090:8090"
+      - "8091:8091"
+      - "8092:8092"
+      - "8093:8093"
+      - "8094:8094"
+    volumes:
+      - /opt/ngp:/opt/ngp
+      - /var/log/uwsgi:/var/log/uwsgi
+    extra_hosts:
+      - "ngpdb-local.cdnetworks.com:10.192.237.211"
+      - "spectrumapi-qa.cdnetworks.com:10.192.237.213"
+      - "customerad.cdnetworks.cu:10.40.203.37"
+      - "prismapi-qa.cdnetworks.com:10.192.237.213"
+      - "auroraapi-qa.cdnetworks.com:10.192.237.213"
+      - "pantherapi-qa.cdnetworks.com:10.192.237.215"
