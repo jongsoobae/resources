@@ -1,0 +1,10 @@
+version: "2"
+services:
+  mongodb:
+    restart: "always"
+    image: "mongo:latest"
+    ports:
+      - "27017:27017"
+    volumes:
+      - ~/.my_docker_volumes/mongodb:/data/db
+
