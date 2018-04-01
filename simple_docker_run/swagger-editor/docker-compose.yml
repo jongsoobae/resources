@@ -1,0 +1,8 @@
+version: "2"
+services:
+  swagger-editor:
+    restart: "always"
+    image: "swaggerapi/swagger-editor:latest"
+    ports:
+      - "80:8555"
+
