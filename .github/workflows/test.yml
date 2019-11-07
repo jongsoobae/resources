@@ -25,5 +25,7 @@ jobs:
       run: |
         which python
         python --version
+
+        sudo apt install libmysqlclient-dev
         
         echo $GITHUB_WORKSPACE
