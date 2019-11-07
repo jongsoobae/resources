@@ -27,5 +27,7 @@ jobs:
         python --version
 
         sudo apt install libmysqlclient-dev
+
+        dpkg -L libmysqlclient-dev
         
         echo $GITHUB_WORKSPACE
