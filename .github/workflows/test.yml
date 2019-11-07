@@ -25,4 +25,5 @@ jobs:
       run: |
         which python
         python --version
+        apt install tree
         tree /opt/hostedtoolcache
