@@ -25,8 +25,5 @@ jobs:
       run: |
         which python
         python --version
-        sudo apt install tree
-        tree /opt/hostedtoolcache -L 2
-
-        cat ~/.bashrc
-        cat ~/.bash_profile
+        
+        echo $GITHUB_WORKSPACE
