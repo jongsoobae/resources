@@ -16,6 +16,7 @@ jobs:
       run: |
         which python
         python --version
+        echo $PATH
 
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
@@ -26,8 +27,7 @@ jobs:
         which python
         python --version
 
-        sudo apt install libmysqlclient-dev
-
-        dpkg -L libmysqlclient-dev
-        
+        echo $PATH
         echo $GITHUB_WORKSPACE
+        ls ~
+        pwd
